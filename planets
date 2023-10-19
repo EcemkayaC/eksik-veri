@@ -1,0 +1,8 @@
+!pip install missingno
+import missingno as msno
+import seaborn as sns
+
+df = sns.load_dataset('planets') """çok fazla veri eksikliği olan bir veri setidir. """
+print(df.head())
+print(msno.matrix(df))
+print(msno.heatmap(df)) """ısı haritası yaptık. """
